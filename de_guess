@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+count=0
+rm stdOut.txt
+while true ;do
+    ./"$1" &>>stdOut.txt
+    if [[ $? -ne 0 ]];then
+    echo "$count times run guess_number" >> stdOut.txt
+    cat < stdOut.txt
+    break
+     fi
+    ((count ++))
+ done

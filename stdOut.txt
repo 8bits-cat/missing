@@ -1,0 +1,13 @@
+Everything went according to plan
+Everything went according to plan
+Everything went according to plan
+Everything went according to plan
+Everything went according to plan
+Everything went according to plan
+Everything went according to plan
+Everything went according to plan
+Everything went according to plan
+Something went wrong
+The error was using magic numbers
+10 times run guess_number
+now i type this test txt 03-10 15-35-38
