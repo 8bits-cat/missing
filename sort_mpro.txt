@@ -1,0 +1,68 @@
+Filename: sorts.py
+
+Line #    Mem usage    Increment  Occurrences   Line Contents
+=============================================================
+     3   20.441 MiB   20.441 MiB           3   @profile
+     4                                         def test_sorted(fn, iters=1000):
+     5   20.441 MiB    0.000 MiB        3003       for i in range(iters):
+     6   20.441 MiB    0.000 MiB       84707           l = [random.randint(0, 100) for i in range(0, random.randint(0, 50))]
+     7   20.441 MiB 61324.219 MiB        3000           assert fn(l) == sorted(l)
+     8                                                 # print(fn.__name__, fn(l))
+
+
+Filename: sorts.py
+
+Line #    Mem usage    Increment  Occurrences   Line Contents
+=============================================================
+    11   20.441 MiB 20441.406 MiB        1000   @profile
+    12                                         def insertionsort(array):
+    13                                         
+    14   20.441 MiB    0.000 MiB       26043       for i in range(len(array)):
+    15   20.441 MiB    0.000 MiB       25043           j = i-1
+    16   20.441 MiB    0.000 MiB       25043           v = array[i]
+    17   20.441 MiB    0.000 MiB      229352           while j >= 0 and v < array[j]:
+    18   20.441 MiB    0.000 MiB      204309               array[j+1] = array[j]
+    19   20.441 MiB    0.000 MiB      204309               j -= 1
+    20   20.441 MiB    0.000 MiB       25043           array[j+1] = v
+    21   20.441 MiB    0.000 MiB        1000       return array
+
+
+Filename: sorts.py
+
+Line #    Mem usage    Increment  Occurrences   Line Contents
+=============================================================
+    24   20.441 MiB 20441.406 MiB       34594   @profile
+    25                                         def quicksort(array):
+    26   20.441 MiB    0.000 MiB       34594       if len(array) <= 1:
+    27   20.441 MiB    0.000 MiB       17797           return array
+    28   20.441 MiB    0.000 MiB       16797       pivot = array[0]
+    29   20.441 MiB    0.000 MiB      162594       left = [i for i in array[1:] if i < pivot]
+    30   20.441 MiB    0.000 MiB      162594       right = [i for i in array[1:] if i >= pivot]
+    31   20.441 MiB    0.000 MiB       16797       return quicksort(left) + [pivot] + quicksort(right)
+
+
+Filename: sorts.py
+
+Line #    Mem usage    Increment  Occurrences   Line Contents
+=============================================================
+    34   20.441 MiB 20441.406 MiB       33750   @profile
+    35                                         def quicksort_inplace(array, low=0, high=None):
+    36   20.441 MiB    0.000 MiB       33750       if len(array) <= 1:
+    37   20.441 MiB    0.000 MiB          51           return array
+    38   20.441 MiB    0.000 MiB       33699       if high is None:
+    39   20.441 MiB    0.000 MiB         949           high = len(array)-1
+    40   20.441 MiB    0.000 MiB       33699       if low >= high:
+    41   20.441 MiB    0.000 MiB       17324           return array
+    42                                         
+    43   20.441 MiB    0.000 MiB       16375       pivot = array[high]
+    44   20.441 MiB    0.000 MiB       16375       j = low-1
+    45   20.441 MiB    0.000 MiB      124745       for i in range(low, high):
+    46   20.441 MiB    0.000 MiB      108370           if array[i] <= pivot:
+    47   20.441 MiB    0.000 MiB       56653               j += 1
+    48   20.441 MiB    0.000 MiB       56653               array[i], array[j] = array[j], array[i]
+    49   20.441 MiB    0.000 MiB       16375       array[high], array[j+1] = array[j+1], array[high]
+    50   20.441 MiB    0.000 MiB       16375       quicksort_inplace(array, low, j)
+    51   20.441 MiB    0.000 MiB       16375       quicksort_inplace(array, j+2, high)
+    52   20.441 MiB    0.000 MiB       16375       return array
+
+

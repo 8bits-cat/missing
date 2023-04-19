@@ -1,0 +1,10 @@
+4月 11 21:54:22 ubuntu-22 systemd[1653]: Startup finished in 2.734s.
+4月 11 17:42:48 ubuntu-22 systemd[1663]: Startup finished in 4.173s.
+4月 11 11:18:46 ubuntu-22 systemd[1615]: Startup finished in 4.352s.
+4月 10 21:32:21 ubuntu-22 systemd[1682]: Startup finished in 2.493s.
+4月 10 17:44:06 ubuntu-22 systemd[1660]: Startup finished in 2.415s.
+4月 10 12:56:22 ubuntu-22 systemd[1676]: Startup finished in 2.610s.
+4月 08 22:30:00 ubuntu-22 systemd[1661]: Startup finished in 2.976s.
+4月 08 11:22:19 ubuntu-22 systemd[1670]: Startup finished in 4.214s.
+4月 07 21:42:53 ubuntu-22 systemd[1703]: Startup finished in 2.787s.
+4月 07 21:21:01 ubuntu-22 systemd[1609]: Startup finished in 2.530s.
